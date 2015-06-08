@@ -1,0 +1,20 @@
+<h1>Words Search</h1>
+<%= form_for search_path, method: :get do |f| %>
+    <p>
+      <%= f.label "Search for" %>
+      <%= text_field_tag :q, params[:q] %>
+      <%= submit_tag "Go", name: nil %>
+    </p>
+<% end %>
+<ul>
+  <% @words.each do |word| %>
+      <li>
+        <h3>
+          <%= link_to word.try(:highlight).try(:name) ? word.highlight.name[0].html_safe : word.name,
+                      controller: "words",
+                      action: "show",
+                      id: word.id%>
+        </h3>
+      </li>
+  <% end %>
+</ul>

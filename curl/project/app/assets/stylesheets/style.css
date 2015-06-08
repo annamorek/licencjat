@@ -1,0 +1,37 @@
+body {
+    font: 1em/1.5 sans-serif;
+    color: #444135;
+}
+p {
+    margin-bottom: 24px;
+}
+header, .main-nav {
+    text-align: center;
+}
+header {
+    color: #f7f8ee;
+}
+.main-nav a {
+    font-size: .99em;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #444135;
+    display: inline-block;
+    margin: 24px 12px;
+}
+.main-nav a:hover {
+    border-top: 2px solid #f07057;
+    padding-top: 10px;
+}
+
+.main-nav a {
+    border-top: 2px solid #2f8478;
+    padding-top: 10px;
+}
+
+.main-nav ul li {
+    display: inline-block;
+    list-style: none;
+
+}

@@ -1,0 +1,2 @@
+@import "js/vendor/html5shiv.js";
+@import "js/vendor/respond.min.js";

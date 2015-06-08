@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <title>Przepis na curling</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-2" />
+  <meta name=viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="jquery-1.11.3.min.js"></script>
+  <script src="http://codepen.io/username/pen/aBcDef"></script>
+
+</head>
+<body>
+
+<header>
+  <h1>Przepis na curling</h1>
+  <h3>Wszystko, czego nie wiesz o tym sporcie</h3>
+</header>
+<nav class="main-nav">
+  <ul>
+      <li><%= link_to "Duch curlingu", static_pages_home_path %></li>
+      <li><%= link_to "Tor do gry", static_pages_lod_path %></li>
+      <li><%= link_to "Zasady", static_pages_zasady_path %></li>
+      <li><%= link_to "Sprzęt do gry", static_pages_sprzet_path %></li>
+      <li><%= link_to "Fizyka curlingu", static_pages_fizyka_path %></li>
+      <li><%= link_to "Słownik", categories_path %></li>
+      <li><%= link_to "Kontakt", static_pages_kontakt_path %></li>
+  </ul>
+  </nav>
+
+<%= yield %>
+
+
+</body>
+</html>

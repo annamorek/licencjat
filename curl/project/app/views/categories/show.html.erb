@@ -1,0 +1,27 @@
+<div class="main">
+<p id="notice"><%= notice %></p>
+
+Słowa z kategorii: <strong><%= @category.name %></strong>
+</p>
+<% if @category.words.count > 0 %>
+    <table>
+      <% @category.words.each do |attr| %>
+          <tbody>
+          <tr>
+            <td> <strong><%= attr.name %></strong></td>
+            <td><%= attr.translation %></td>
+          </tr>
+          </tbody>
+      <% end %>
+    </table>
+<% else %>
+    <div>
+      <p>Ta kategoria nie ma jeszcze żadnych słów.</p>
+    </div>
+<% end %>
+  <br><br>
+  <p>
+    Lista wszystkich kategorii: <%= link_to 'Kategorie', categories_path %>
+    Lista wszystkich słów w słowniku: <%= link_to 'Słowa', words_path %><br><br>
+  </p>
+</div>

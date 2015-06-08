@@ -1,0 +1,13 @@
+<div class="main">
+<p id="notice"><%= notice %></p>
+
+<h1>Słownik terminów curlingowych został podzielony na następujące kategorie:</h1>
+
+  <% @categories.each do |category| %>
+        <strong><%= category.name %></strong>
+        <%= link_to 'Pokaż słowa', category %><br><br>
+  <% end %>
+
+  <p><%= link_to 'Wszystkie słowa', words_path %></p>
+
+</div>
