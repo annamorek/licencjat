@@ -1,15 +1,10 @@
 <div class="main">
   <h1>Słownik terminów curlingowych</h1>
 
-
-
-
-
-
   <h3>Ostatnio dodane: </h3>
   <% Word.order("updated_at desc").limit(5) do |word| %>
       <% if word.displayed != 0 %>
-          <h4>Słowo: <%= word.name %></h4>
+          <h4>Słowo: <%= word.naem %></h4>
           <h5>Data aktualizacji: <%= word.updated_at %></h5>
       <% end %>
   <% end %>
@@ -23,7 +18,7 @@
         </p>
     <% end %>
 
-      <% Word.all.each do |word| %>
+      <% @words.each do |word| %>
           <% if word.displayed != 0 %>
 
                 <p><strong><%= word.name %></strong>
@@ -33,5 +28,5 @@
       <% end %>
 
 <p><%= link_to "Kategorie", categories_path %></p>
-<p>Brakuje słowa? <%= link_to "Dodaj je", new_word_path %></p>
+<p>Brakuje słowa? <%= link_to "Dodaj", new_word_path %></p>
 </div>

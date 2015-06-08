@@ -51,10 +51,7 @@ gem 'devise'
 #Use active_skin for activeadmin
 gem 'active_skin'
 
-#Use elasticsearch
-#gem 'elasticsearch', git: 'git://github.com/elasticsearch/elasticsearch-ruby.git'
-#gem 'elasticsearch-model'
-#gem 'elasticsearch-rails'
-
 #bootstrap
 gem 'bootstrap-sass', '~> 3.3.4'
+
+gem 'pry'

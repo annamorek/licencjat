@@ -1,7 +1,7 @@
 class WordsController < ApplicationController
   #before_action :set_word, only: [:show, :edit, :update, :destroy]
   def index
-    @words = Word.all
+    @words = Word.search(params[:q])
   end
 
   def show
@@ -54,7 +54,7 @@ class WordsController < ApplicationController
   private
 
   def word_params
-    params.require(:word).permit(:name, :translation, :displayed)
+    params.require(:word).permit(:name, :translation, :displayed, :mail)
   end
 
   def set_word

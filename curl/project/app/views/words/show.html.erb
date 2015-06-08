@@ -1,19 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <div class="main">
+	<h1>Zapisano słowo</h1>
 <h2><%= @word.name %></h2>
 
 <p>
-  <strong>Wyjaśnienie:</strong>
-  <%= @word.translation %>
+  <strong>Twój email:</strong>
+  <%= @word.mail %>
 </p>
 
-<p>
-  <strong>Kategoria:</strong>
-  <%= @word.category_id %>
-</p>
-
-<%= link_to 'Edit', edit_word_path(@word) %> |
-<%= link_to 'Back', words_path %>
+<%= link_to 'Wszystkie słowa', words_path %>
 
 </div>

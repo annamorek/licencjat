@@ -1,3 +1,5 @@
+$( document ).ready(function() {
+	debugger
 
 var  mn = $(".main-nav");
 mns = "main-nav-scrolled";
@@ -11,3 +13,5 @@ $(window).scroll(function() {
     }
 });
 
+
+});
