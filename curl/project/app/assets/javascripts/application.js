@@ -1,5 +1,10 @@
+//=require jquery
+//=require jquery_ujs
+//=require turbolinks
+//=require_tree .
+
+
 $( document ).ready(function() {
-	debugger
 
 var  mn = $(".main-nav");
 mns = "main-nav-scrolled";
@@ -12,6 +17,7 @@ $(window).scroll(function() {
         mn.removeClass(mns);
     }
 });
+
 
 
 });

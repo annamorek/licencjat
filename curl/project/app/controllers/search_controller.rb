@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
-
+  skip_authorization_check
   def search
     if params[:q].nil?
       @words = []

@@ -1,4 +1,5 @@
 class WordsController < ApplicationController
+    skip_authorization_check
   #before_action :set_word, only: [:show, :edit, :update, :destroy]
   def index
     @words = Word.search(params[:q])

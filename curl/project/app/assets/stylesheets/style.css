@@ -1,4 +1,10 @@
+* {
+    box-sizing: border-box;
+}
 body {
+    margin: 0;
+    padding-top: 250px;
+    background: #f2f2e8;
     font: 1em/1.5 sans-serif;
     color: #444135;
 }
@@ -9,6 +15,9 @@ header, .main-nav {
     text-align: center;
 }
 header {
+    height: 300px;
+    padding-top: 50px;
+    background: #2f8478;
     color: #f7f8ee;
 }
 .main-nav a {
@@ -28,14 +37,74 @@ header {
     border-top: 2px solid #f07057;
     padding-top: 10px;
 }
-
 .main-nav a {
     border-top: 2px solid #2f8478;
     padding-top: 10px;
 }
-
-.main-nav ul li {
-    display: inline-block;
-    list-style: none;
-
+.main-nav,
+.main {
+    position: relative;
+}
+header,
+.main-nav-scrolled {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+.main-nav {
+    background: #fff;
+    height: 80px;
+    z-index: 150;
+    margin-bottom: -80px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+.main {
+    background: #f2f2e8;
+    padding: 110px 150px 150px;
+        display: table;
+}
+.main a {
+    color: #2f8478;
+    text-decoration: none;
+    border-bottom: 2px solid #2f8478;
+}
+.main a:hover {
+    color: #ce534d;
+    text-decoration: none;
+    border-bottom: 2px solid #ce534d;
+}
+input {
+    border: 0;
+    background-color: #ffffff;
+    border-bottom: 4px solid #2f8478;
+    padding: 0.2em;
+    font-size: 1.5em;
+}
+input:focus {
+    outline: 0;
+    border: 0;
+    border-bottom: 4px solid #ce534d;
+}
+.article {
+    padding: 1em;
+    width: 100%;
+    margin 0 auto;
+}
+.main .col1 {
+    width: 23%;
+    padding: 2%;
+    float: left;
+    background: #f2f2e8;
+        display: table-cell;
+}
+.main .col2 {
+    width: 77%;
+    padding: 2%;
+    float: right;
+    background: #f2f2e8;
+        display: table-cell;
+}
+img {
+    float: left;
+    padding: 20px;
 }

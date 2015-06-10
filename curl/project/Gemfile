@@ -51,7 +51,8 @@ gem 'devise'
 #Use active_skin for activeadmin
 gem 'active_skin'
 
-#bootstrap
-gem 'bootstrap-sass', '~> 3.3.4'
-
+#pry
 gem 'pry'
+
+#cancancan
+gem 'cancancan', '~> 1.10'
