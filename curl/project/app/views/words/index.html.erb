@@ -1,32 +1,23 @@
 <div class="main">
   <h1>Słownik terminów curlingowych</h1>
 
-  <h3>Ostatnio dodane: </h3>
-  <% Word.order("updated_at desc").limit(5) do |word| %>
-      <% if word.displayed != 0 %>
-          <h4>Słowo: <%= word.naem %></h4>
-          <h5>Data aktualizacji: <%= word.updated_at %></h5>
-      <% end %>
-  <% end %>
-
-    <br><br>
-    <h4>Wyszukaj słowo:</h4>
+    <h3>Wyszukaj słowo:</h3>
     <%= form_for search_path, method: :get do |f| %>
         <p>
           <%= text_field_tag :q, params[:q] %>
           <%= submit_tag "Szukaj!", name: nil %>
         </p>
     <% end %>
-
+<div class="slowa">
       <% @words.each do |word| %>
-          <% if word.displayed != 0 %>
+          <% if word.displayed = true %>
 
                 <p><strong><%= word.name %></strong>
                 <%= word.translation %></p>
 
           <% end %>
       <% end %>
-
+</div>
 <p><%= link_to "Kategorie", categories_path %></p>
 <p>Brakuje słowa? <%= link_to "Dodaj", new_word_path %></p>
 </div>

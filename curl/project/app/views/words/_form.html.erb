@@ -17,10 +17,11 @@
 
             <h3>Słowo:</h3>
             <%= f.text_field :name %><br>
-            <h3>Twój e-mail:</h3>
+            <h4>Jeżeli chcesz otrzymać powiadomienie o dodaniu tłumaczenia do tego słowa, zostaw nam e-mail.<h4>
+              <h3>E-mail:</h3>
             <%= f.text_field :mail %><br>
 <br>
-        <%= f.submit %>
+        <%= f.submit "Dodaj!" %>
 
       </div>
   <% end %>

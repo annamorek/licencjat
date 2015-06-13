@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
-  authorize_resource only: [:update, :delete, :show]
+  authorize_resource only: [:update, :delete]
 
   def index
     @categories = Category.all

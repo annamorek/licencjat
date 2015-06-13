@@ -2,7 +2,7 @@ ActiveAdmin.register_page "Dashboard" do
 
   menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
 
-  content title: proc{ I18n.t("active_admin.dashboard") } do
+  content title: proc{ ("Przepis na curling - panel administracyjny") } do
     
 
     section "Ostatnio dodane słowa czekają na tłumaczenie" do
